@@ -30,5 +30,10 @@
   },
   "files": [
     "index.js"
+  ],
+  "keywords": [
+    "env",
+    "config",
+    "utils"
   ]
 }
