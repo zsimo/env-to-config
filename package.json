@@ -1,0 +1,40 @@
+{
+  "name": "env-to-config",
+  "version": "1.0.0",
+  "description": "Read .env file and returns a frozen config object.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Simone Sacchi <zsimo30@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsimo/env-to-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zsimo/env-to-config/issues"
+  },
+  "homepage": "https://github.com/zsimo/env-to-config#readme",
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "roots": [
+      "./test/"
+    ],
+    "testRegex": "\\.js$",
+    "moduleFileExtensions": [
+      "js"
+    ]
+  }
+}
