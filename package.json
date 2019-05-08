@@ -5,6 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
+    "test-coverage": "jest --collect-coverage",
     "report-coverage": "cat ./coverage/lcov.info | codecov"
   },
   "author": "Simone Sacchi <zsimo30@gmail.com>",
@@ -21,24 +22,13 @@
     "node": ">=8"
   },
   "devDependencies": {
+    "codecov": "^3.3.0",
     "jest": "^24.8.0"
   },
   "dependencies": {
-    "codecov": "^3.3.0",
     "dotenv": "^8.0.0"
   },
   "files": [
-    "dist"
-  ],
-  "jest": {
-    "roots": [
-      "./test/"
-    ],
-    "testRegex": "\\.js$",
-    "moduleFileExtensions": [
-      "js"
-    ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
-  }
+    "index.js"
+  ]
 }

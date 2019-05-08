@@ -1,14 +1,13 @@
 'use strict';
 
 var path = require("path");
-var envToConfig = require(path.resolve(__dirname, "../", "dist"));
-
+var envToConfig = require(path.resolve(__dirname, "index"));
 
 describe("env-to-config", () => {
 
     test("If the .env file is not present, config must returns an empty object", () => {
         var config = envToConfig({
-            path: path.resolve(__dirname, ".env")
+            path: path.resolve(__dirname, ".env2")
         });
         expect(config).toEqual ({});
     });
