@@ -1,4 +1,9 @@
 # env-to-config
+
+[![Build Status](https://travis-ci.org/zsimo/env-to-config.svg?branch=master)](https://travis-ci.org/zsimo/env-to-config)
+[![codecov](https://codecov.io/gh/zsimo/env-to-config/branch/master/graph/badge.svg)](https://codecov.io/gh/zsimo/env-to-config)
+
+
 Read .env file and returns a frozen config object.
 Accepts a mandatory_keys array and a default_values array as parameter.
 Inspired by Laravel config dir (yes, the php framework).
