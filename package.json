@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/zsimo/env-to-config/issues"
   },
-  "homepage": "https://github.com/zsimo/env-to-config#readme",
+  "homepage": "https://github.com/zsimo/env-to-config",
   "engines": {
     "node": ">=8"
   },
