@@ -4,7 +4,7 @@
   "description": "Read .env file and returns a frozen config object.",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "jest && codecov",
+    "test": "jest",
     "report-coverage": "cat ./coverage/lcov.info | codecov"
   },
   "author": "Simone Sacchi <zsimo30@gmail.com>",
