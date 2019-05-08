@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - "10"
 sudo: false
-after_succes:
+after_success:
   - npm run report-coverage
