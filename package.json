@@ -4,7 +4,8 @@
   "description": "Read .env file and returns a frozen config object.",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "report-coverage": "cat ./coverage/lcov.info | codecov"
   },
   "author": "Simone Sacchi <zsimo30@gmail.com>",
   "license": "MIT",
@@ -23,6 +24,7 @@
     "jest": "^24.8.0"
   },
   "dependencies": {
+    "codecov": "^3.3.0",
     "dotenv": "^8.0.0"
   },
   "files": [
@@ -35,6 +37,8 @@
     "testRegex": "\\.js$",
     "moduleFileExtensions": [
       "js"
-    ]
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
