@@ -2,7 +2,7 @@
   "name": "env-to-config",
   "version": "1.0.0",
   "description": "Read .env file and returns a frozen config object.",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "jest",
     "test-coverage": "jest --collect-coverage",

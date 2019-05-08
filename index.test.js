@@ -25,16 +25,17 @@ describe("env-to-config", () => {
         }).toThrowError("Missing env key: important");
     });
 
-    // test("add second key", () => {
-    //     var config = envToConfig({
-    //         default_values: [{
-    //             second_key: "pippo"
-    //         }]
-    //     });
-    //     expect(config).toEqual ({
-    //         KEY_EXAMPLE: "ciao",
-    //         second_key: "pippo"
-    //     });
-    // });
+    test("add second key", () => {
+        var config = envToConfig({
+            default_values: [{
+                key: "second_key",
+                value: "pippo"
+            }]
+        });
+        expect(config).toEqual ({
+            KEY_EXAMPLE: "ciao",
+            second_key: "pippo"
+        });
+    });
 
 });
