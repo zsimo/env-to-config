@@ -88,3 +88,6 @@ var config = envToConfig({
 });
 module.exports = config;
 ```
+
+## License
+[MIT](https://github.com/zsimo/env-to-config/blob/master/LICENSE)
