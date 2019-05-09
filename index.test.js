@@ -25,6 +25,14 @@ describe("env-to-config", () => {
         }).toThrowError("Missing env key: important");
     });
 
+    test("missing mandatory key (case sensitive finding)", () => {
+        expect(function () {
+            var config = envToConfig({
+                mandatory_keys: ["KEY_EXAMPLe"]
+            });
+        }).toThrowError("Missing env key: KEY_EXAMPLe");
+    });
+
     test("add second key", () => {
         var config = envToConfig({
             default_values: [{
