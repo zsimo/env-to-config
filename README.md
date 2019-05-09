@@ -62,7 +62,7 @@ module.exports = config;
 ```
 #### mandatory_keys `type array`
 Default: `[]`  
-A list of mandatory keys. It `throws an error` in case of a missing mandatory key.
+A list of mandatory keys. It `throws an error` in case of a missing mandatory key (`case sensitive` check).
 ```js
 var envToConfig = require("env-to-config");
 var config = envToConfig({
