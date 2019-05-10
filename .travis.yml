@@ -8,6 +8,7 @@ script:
   - npm run test-coverage
 after_success:
   - npm run report-coverage
+  - npm run test-with-coverage
 deploy:
   provider: npm
   email: "zsimo30@gmail.com"
