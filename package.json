@@ -7,7 +7,7 @@
     "test": "jest",
     "test-coverage": "jest --collect-coverage",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage"
+    "report-codacy": "cat ./coverage/lcov.info | codacy-coverage"
   },
   "author": "Simone Sacchi <zsimo30@gmail.com>",
   "license": "MIT",
