@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/zsimo/env-to-config.svg?branch=master)](https://travis-ci.org/zsimo/env-to-config)
 [![codecov](https://codecov.io/gh/zsimo/env-to-config/branch/master/graph/badge.svg)](https://codecov.io/gh/zsimo/env-to-config)
 [![Dependencies](https://david-dm.org/zsimo/env-to-config.svg)](https://david-dm.org/zsimo/env-to-config)
+[![install size](https://packagephobia.now.sh/badge?p=env-to-config)](https://packagephobia.now.sh/result?p=env-to-config)
  
 "env-to-config" is a function that read the .env file and returns a `frozen` object [(Object.freeze)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
 The main purpose is to provide a ready to use config object, with all needed env keys, without directly check for the existence of those keys in the process.env object.  
