@@ -1,6 +1,6 @@
 {
   "name": "env-to-config",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Read .env file and returns a frozen config object.",
   "main": "./index.js",
   "scripts": {
