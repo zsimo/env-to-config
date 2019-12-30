@@ -12,6 +12,6 @@ after_success:
 deploy:
   provider: npm
   email: "zsimo30@gmail.com"
-  api_key: "1457f97e-b6d6-44e0-a8b1-ad66b8b5526d"
+  api_key: $NPM_AUTH_TOKEN
   on:
     tags: true
