@@ -12,9 +12,13 @@ describe("env-to-config", () => {
         expect(config).toEqual ({});
     });
 
-    test(".env with one key", () => {
+    test(".env with two key", () => {
         var config = envToConfig();
-        expect(config).toEqual ({KEY_EXAMPLE: "ciao"});
+        expect(config).toEqual ({
+            KEY_EXAMPLE: "ciao",
+            KEY_NUMERIC: 2,
+            KEY_ZERO: 0
+        });
     });
 
     test("missing mandatory key", () => {
@@ -42,8 +46,19 @@ describe("env-to-config", () => {
         });
         expect(config).toEqual ({
             KEY_EXAMPLE: "ciao",
+            KEY_NUMERIC: 2,
+            KEY_ZERO: 0,
             second_key: "pippo"
         });
+    });
+
+    test("numeric values must by integer", () => {
+        var config = envToConfig();
+        expect(config.KEY_NUMERIC).toStrictEqual(2);
+    });
+    test("0 must by integer", () => {
+        var config = envToConfig();
+        expect(config.KEY_ZERO).toStrictEqual(0);
     });
 
 });

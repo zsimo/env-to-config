@@ -87,5 +87,9 @@ var config = envToConfig({
 module.exports = config;
 ```
 
+## Notes
+- empty keys are removed `KEY_EMPTY=`
+- numeric values are casted to integer with base 10 `KEY_NUMERIC=2`
+
 ## License
 [MIT](https://github.com/zsimo/env-to-config/blob/master/LICENSE)

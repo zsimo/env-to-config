@@ -3,6 +3,10 @@
 var dotenv = require("dotenv");
 var config;
 
+function _isNumeric (input) {
+    return input && !isNaN(input);
+}
+
 
 module.exports = function (options) {
 
@@ -33,6 +37,17 @@ module.exports = function (options) {
     defaultValues.forEach(function (defaultObj) {
         if (defaultObj.key && !config.hasOwnProperty(defaultObj.key)) {
             config[defaultObj.key] = defaultObj.value;
+        }
+    });
+
+    // cast as integer any numeric value
+    Object.keys(config).forEach(function (key) {
+        // empty keys are removed
+        if (config[key] === "") {
+            delete config[key];
+        }
+        if (_isNumeric(config[key])) {
+            config[key] = parseInt(config[key], 10);
         }
     });
 
