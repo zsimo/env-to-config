@@ -1,9 +1,8 @@
 # env-to-config
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/zsimo/env-to-config.svg?branch=master)](https://travis-ci.org/zsimo/env-to-config)
 [![codecov](https://codecov.io/gh/zsimo/env-to-config/branch/master/graph/badge.svg)](https://codecov.io/gh/zsimo/env-to-config)
-[![Dependencies](https://david-dm.org/zsimo/env-to-config.svg)](https://david-dm.org/zsimo/env-to-config)
 [![install size](https://packagephobia.now.sh/badge?p=env-to-config)](https://packagephobia.now.sh/result?p=env-to-config)
  
 "env-to-config" is a function that read the .env file and returns a `frozen` object [(Object.freeze)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze).
@@ -89,7 +88,7 @@ module.exports = config;
 
 ## Notes
 - empty keys are removed `KEY_EMPTY=`
-- numeric values are casted to integer with base 10 `KEY_NUMERIC=2`
+- numeric values are casted to integer `KEY_NUMERIC=2`
 
 ## License
 [MIT](https://github.com/zsimo/env-to-config/blob/master/LICENSE)
