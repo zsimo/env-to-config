@@ -9,9 +9,3 @@ script:
 after_success:
   - npm run report-coverage
   - npm run report-codacy
-deploy:
-  provider: npm
-  email: "zsimo30@gmail.com"
-  api_key: $NPM_AUTH_TOKEN
-  on:
-    tags: true
