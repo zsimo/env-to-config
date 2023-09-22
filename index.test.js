@@ -15,6 +15,7 @@ describe("env-to-config", () => {
     test(".env with two key", () => {
         var config = envToConfig();
         expect(config).toEqual ({
+            KEY_BOOL: true,
             KEY_EXAMPLE: "ciao",
             KEY_NUMERIC: 2,
             KEY_ZERO: 0
@@ -45,6 +46,7 @@ describe("env-to-config", () => {
             }]
         });
         expect(config).toEqual ({
+            KEY_BOOL: true,
             KEY_EXAMPLE: "ciao",
             KEY_NUMERIC: 2,
             KEY_ZERO: 0,
@@ -60,5 +62,30 @@ describe("env-to-config", () => {
         var config = envToConfig();
         expect(config.KEY_ZERO).toStrictEqual(0);
     });
-
+    test("boolean values must by boolean", () => {
+        var config = envToConfig();
+        expect(config.KEY_BOOL).toStrictEqual(true);
+    });
+    test("default boolean must by boolean", () => {
+        var config = envToConfig({
+            default_values: [
+                {
+                    key: "prod",
+                    value: true
+                }
+            ]
+        });
+        expect(config.prod).toStrictEqual(true);
+    });
+    test("default string \"true\" must by boolean", () => {
+        var config = envToConfig({
+            default_values: [
+                {
+                    key: "prod",
+                    value: "true"
+                }
+            ]
+        });
+        expect(config.prod).toStrictEqual(true);
+    });
 });
