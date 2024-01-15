@@ -47,7 +47,7 @@ module.exports = function (options) {
             delete config[key];
         }
         if (config[key] === "true" || config[key] === "false") {
-            config[key] = Boolean(config[key]);
+            config[key] = config[key] === "true";
         } else if (typeof config[key] === "string" && _isNumeric(config[key])) {
             config[key] = parseInt(config[key], 10);
         }

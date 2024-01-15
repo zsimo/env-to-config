@@ -88,4 +88,15 @@ describe("env-to-config", () => {
         });
         expect(config.prod).toStrictEqual(true);
     });
+    test("default string \"false\" must by boolean", () => {
+        var config = envToConfig({
+            default_values: [
+                {
+                    key: "prod",
+                    value: "false"
+                }
+            ]
+        });
+        expect(config.prod).toStrictEqual(false);
+    });
 });
